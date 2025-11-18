@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky 스크롤 내렸을때 어떻게 동작하게 만드는 방법</title>
+    <style>
+        body{
+            padding-bottom: 2000px;
+        }
+        .positionbox{
+            height: 1500px;
+        }
+        .positionbox>div{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background: red;
+            display: inline-block;
+         
+        }
+        .positionbox .sticky{
+            position: sticky; 
+            top: 0px;
+        /* sticky 높이지정후 사용 가능,
+        위치를 지정한 그위치에서 스크롤을 내려도 고정되어있음 */
+        
+            
+        }
+        .positionbox .static{
+            background: yellow;
+            position: static;
+            top: 0;
+ /* static 기본상태, (다른 position 태그 사용후 기본으로 돌릴때 사용) */
+    
+
+        }
+        .positionbox .fixed{
+            background: aqua;
+            position: fixed;
+            top: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="positionbox">
+        <h2>스크롤을 내려보세요</h2>
+        <div class="sticky">sticky</div>
+        <div class="static">static</div>
+        <div class="fixed">fixed</div>
+    </div>
+</body>
+</html>

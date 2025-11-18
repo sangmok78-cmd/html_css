@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox의 margin 속성</title>
+  <style>
+    .container{
+      width: 700px;
+      border: 5px solid #ddd;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .box{
+      padding: 10px 20px;
+    }
+    .box1{background: red; /* margin-right: auto; */}
+    .box2{background: rgb(92, 245, 92);}
+    .box3{background: rgb(85, 85, 231); margin-left: auto;}
+
+    body>div{
+      width: 700px;
+      height: 200px;
+      border: 5px solid #ddd;
+      margin-bottom: 20px;
+    }
+    .opt{
+      padding: 10px 20px;
+      margin: 0 10px;
+     /*  width: 100px;*/    
+     /* height: 30px; */
+    }
+    .opt1{background: red;}
+    .opt2{background: violet;}
+    .opt3{background: blue;}
+    .opt4{background: yellow}
+
+    .container1{
+      display: flex;
+      align-items: flex-start;  /* 높이의 시작점  */
+
+    }
+    .container2{
+      display: flex;
+      align-items: flex-end;  /* 높이의 맨끝으로 이동 */
+    }
+    .container3{
+      display: flex;
+      align-items: center; /*    높이의 가운데 */
+    }
+    .container4{
+      display: flex;
+      align-items: stretch ;  
+/* 세로높이값이 없을경우 세로꽉채움,(세로 높이값이 지정되어 있을시 start로 적용) */
+    }
+    .container5{
+      display: flex;
+    }
+    .container5 .opt{
+      flex: 150px 0 0;  /* (basis grow shrink) 한번에 쓸수도 있다 */
+      /* flex-basis: 150px ; */
+     /*  opt 전체 넓이를 줄수 있음 */
+
+    }
+  /*   .container5 .opt1{flex-grow: 1;} */ /* 빈공간을 다씀 */
+    .container5 .opt2{}
+    .container5 .opt3{}
+    
+    .container6{display: flex;}
+    .container6 .opt{width: 200px;}
+    .container6 .opt1{flex-shrink: 1;} /* 공간이 없으면 줄어드는게 shrink */
+    .container6 .opt2{flex-shrink: 0;}
+    .container6 .opt3{flex-shrink: 1;}
+    .container6 .opt4{flex-shrink: 0;}
+
+    .container7{display: flex;}
+    .container7 .opt1{order: 1;}  /* order 순서지정, (기본값은 0) */
+    .container7 .opt2{order: 0;}
+    .container7 .opt3{order: 0;}
+    .container7 .opt4{order: 0;}
+
+
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+  </div>
+
+  <hr>
+
+  <div class="container1">
+    <div class="opt opt1">1</div>
+    <div class="opt opt2">2</div>
+    <div class="opt opt3">3</div>
+    <div class="opt opt4">4</div>
+  </div>
+  <div class="container2">
+    <div class="opt opt1">1</div>
+    <div class="opt opt2">2</div>
+    <div class="opt opt3">3</div>
+    <div class="opt opt4">4</div>
+  </div>
+  <div class="container3">
+    <div class="opt opt1">1</div>
+    <div class="opt opt2">2</div>
+    <div class="opt opt3">3</div>
+    <div class="opt opt4">4</div>
+  </div>
+  <div class="container4">
+    <div class="opt opt1">1</div>
+    <div class="opt opt2">2</div>
+    <div class="opt opt3">3</div>
+    <div class="opt opt4">4</div>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="container5">
+    <div class="opt opt1">가나다라마</div>
+    <div class="opt opt2">가나다라마바사</div>
+    <div class="opt opt3">ABCDE</div>
+  </div>
+  <div class="container6">
+    <div class="opt opt1">가나다라마</div>
+    <div class="opt opt2">가나다라마바사</div>
+    <div class="opt opt3">ABCDE</div>
+    <div class="opt opt4">ABCDE</div>
+  </div>
+  <div class="container7">
+    <div class="opt opt1">가나다라마</div>
+    <div class="opt opt2">가나다라마바사</div>
+    <div class="opt opt3">ABCDE</div>
+    <div class="opt opt4">ABCDE</div>
+  </div>
+
+  
+  
+</body>
+</html>

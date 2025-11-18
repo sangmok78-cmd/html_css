@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>이미지, 색상, 글자 투명도 조정하기</title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{
+				background: #ccc url(./images/bg_gray.png) no-repeat ;
+			}
+			div{
+				background: url(./images/circle.png) no-repeat;
+				width: 530px;
+				height: 424px;
+				opacity: .8; /* 본인포함 하위 모두 투명효과 가짐 나만 투명해지고싶으면 이걸 쓰며안됨 */
+				margin: 0 auto;
+				padding-top: 150px;
+				padding-left: 20px;
+				
+			}
+			.textBox{
+				background: hsla(180, 100%, 100%, .7);   /* 색상, 채도(기본값100%), 밝기(기본값50%) */
+				width: 25%;
+				padding: 20px;
+				margin: 0 auto;
+				border-radius: 20px;
+				
+				
+			}
+			.people{
+				font: 3em "Arial black"; /* 3ex=16px*3 */
+				padding-top: 130px;
+				color: rgba(255, 255, 255, .5);
+			}
+
+			/* *{margin: 0;padding: 0;}
+			body{
+				background: #ccc url(./images/bg_gray.png) no-repeat;
+			}
+			div{
+				background: url(./images/circle.png) no-repeat;
+				width: 530px;
+				height: 424px;
+				opacity: .8;
+				margin: 0 auto;
+				padding-top: 150px;
+				padding-left: 20px;
+			}
+			.textBox{
+				background: hsla(180, 100%, 100%, .7);   
+				width: 25%;
+				border-radius: 20px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			.people{
+				font: 3em "Arial black";
+				color: rgba(43, 141, 104, 0.5);
+				padding-top: 100px;
+			} */
+
+			
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<p class="textBox">
+					Freedom is not worth having
+					if it does not include the freedom to make mistakes.				
+			</p>
+			<p class="people">- Mahatma Gandhi - <p>
+		</div>
+	</body>
+</html>

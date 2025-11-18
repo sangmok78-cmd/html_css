@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>인용부호, 특정 문자열과 같은 콘텐츠 생성하기</title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			h1::before{ /* before는 앞에다 뭐하고싶다 */
+				content: open-quote; /* open-quot "를 열어준다 "ㄱㄴㄷㄹ */
+			}
+			h1::after{ /* after는 앞에다 뭐하고싶다 */
+				content: close-quote; /* close-quote "를 닫아준다  ㄱㄴㄷㄹ" */
+			}
+			p{
+				white-space: pre; /* pre 있는 그대로 보여주는거 */
+			}
+			q{
+				quotes: "<<"">>""[""]"; /* quotes 안에 들있는걸 바꿔주는태그(잘쓰이지않는다) */
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>콘텐츠 생성하기</h1>
+		<p>
+			<q> <!-- q태그는 ""가 생긴다 -->
+						Freedom is not worth having 
+						if it does not include the freedom to make mistakes.						
+						<q> Mahatma Gandhi </q>  
+			</q> 
+
+			<q class="qStyle"> 실수할 자유가 없는 자유란 가치가 없다. 
+						<q> 마하트마 간디 </q> </q> 
+		</p>
+		<hr>
+		<p>
+			<q>
+						The future depends on what we do in the present. 
+						<q> Mahatma Gandhi </q>  
+			</q> 
+
+			<q class="qStyle"> 미래는 현재 우리가 무엇을 하는가에 달려 있다.  
+						<q> 마하트마 간디 </q> </q> 
+		</p>
+
+	</body>
+</html>

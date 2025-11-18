@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>요소의 배경 처리하기</title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			html{/* height: 100%; */}
+			body{
+				margin: 0;padding: 0;
+				background-color: silver;
+				background-image: url(./images/bg0.png); /* 배경url 태그 */
+				/* background-repeat: no-repeat;  *//* no-repeat; 반복x */
+				background-repeat: repeat-y; /* repeat-y Y축으로 반복 */
+				background-position: right top; /* 배경 방향 */ 
+				background-attachment: fixed; /* 스크롤 */
+				/* background-size: 40px; */  /* 배경 크기 */
+				/* height: 100%; */
+				background-clip:  ;  /* 배경 적용 범위 태그 잘 사용안함 */
+			}
+			div{
+				background:  url(./images/bg1.png) repeat-y top left fixed;
+				/* 노란색상 이미지불러오고 y축으로 반복, 위치는 top left 스크롤 적용 */
+				/* 위에 body에 적용한걸 한번에 적용가능 */
+				padding-left: 60px;
+				width: 90%;
+				/* height: 100%; */ /* 높이는 100%는 최상위도 100% 지정해야지 적용가능 */
+				height: 100vh; /* vh는 화면에 보이는 높이 적용 */
+				padding-top: 30px; /* 배경은 그대로 글자만 위에서부터 띄워짐 */
+			}
+			p{
+				line-height: 180%; /* 글자끼리 위아래로 띄워짐 */
+				background: url(./images/dot.png) repeat-x left bottom;
+				font-size: 1.2em; /*  16px과 동일한 크기 */
+			}
+			#container{
+				height: auto;
+				margin-bottom: 100px;
+			}
+			#container .desc{
+				height: auto;
+				background: yellow;
+				border: 5px dotted #000;
+				width: 200px;
+			}
+
+
+
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<p>Well done is better than well said.</p>
+			<p>Seeing much, suffering much, and studying much, are the three pillars of learning. </p>
+			<p>Education is a progressive discovery of our own ignorance. </p>
+			<p>I want to know God's thoughts; the rest are details.</p>
+			<p>When all think alike, no one thinks very much.</p>
+			<p>Science is a wonderful thing if one does not have to earn one's living at it. </p>
+			<p>It's not that I'm so smart , it's just that I stay with problems longer.</p>
+			<p>Theories should be as simple as possible, but not simpler. </p>
+			<p>Technological progress is like an axe in the hands of a pathological criminal.</p>
+			<p>I never came upon any of my discoveries through the process of rational thinking. </p>
+			<p>Try not to become a man of success but rather to become a man of value. </p>
+			<p>Gravitation cannot be held responsible for people falling in love.</p>
+			<p>What is written without effort is in general read without pleasure. </p>
+			<p>Sincerity is the way of Heaven. </p>
+			<p>The man who moves a mountain begins by carrying away small stones.</p>
+			<p>While there's life, there's hope. </p>
+			<p>Paradise is where I am. </p>
+		</div>
+
+		
+	</body>
+</html>

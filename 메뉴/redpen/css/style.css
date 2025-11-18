@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body{
+    font-family: "Noto Sans KR", sans-serif;
+    background: #000;
+}
+*{box-sizing: border-box;}
+a{text-decoration: none;}
+
+.header_utill{
+    background: #261f4c;
+    padding: 0 120px;
+}
+.header_utill>ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.header_utill>ul>li{}
+.header_utill>ul>li>a{
+    color: #fff;
+    display: block;
+    padding: 10px;
+    font-size: 12px;
+}
+.header_utill>ul>li>a.g{color: #2ee4bb}
+.header_utill>ul>li>ul{
+    display: none;
+    position: absolute;
+    background: #ddd;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 2;  /* 위로 올리는것 숫자가 높을수록 최상위로 올라옴 */
+}
+.header_utill>ul>li:last-child>ul{
+    right: 80px;
+}
+.header_utill>ul>li:hover>ul{
+    display: block; 
+}
+.header_utill>ul>li:hover>ul::before{
+    content:"";
+    border-width: 7px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-color:  transparent transparent #ddd transparent;
+}
+.header_utill>ul>li>ul>li{
+    line-height: 150%;
+}
+.header_utill>ul>li>ul>li>a{
+   color: #000;
+   font-size: 12px;
+}
+.header_utill>ul>li>ul>li>a:hover{
+    color: red;
+}
+.header_nav{
+    width: 100%;
+    height: 100px;
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    background: #fff;
+    transition: .5s;
+}
+.header_nav:hover{
+    background: #261f4c;
+}
+.header_nav h1{}
+.header_nav .gnb_menu{}
+.header_nav .gnb_menu>ul{
+    display: flex;
+}
+.header_nav .gnb_menu>ul>li{}
+.header_nav .gnb_menu>ul>li>a{
+    font-size: 19px;
+    color: #222;
+    padding: 40px 30px;
+    display: block;
+    transition: .5s;
+}
+
+.header_nav:hover .gnb_menu>ul>li>a{
+    color: #fff;
+}
+.header_nav .gnb_menu>ul>li:hover>a{
+    color: red; 
+/* 우선순위가 밑에 있는게 우선이므로 위에 흰색껄러보다 밑에 있어야된다
+그리고 a에 호버하면 마우스 떗을떄 흰색으로 다시 돌아가기 때문에 li한테 호버  */
+}
+.header_nav .quick_list{}
+.header_nav .quick_list>ul{
+    display: flex;
+}
+.header_nav .quick_list>ul>li{
+    margin-left: 10px;
+    padding-left: 20px;
+}
+.header_nav .quick_list>ul>li>a{
+    font-size: 15px;
+}
+.header_nav .quick_list>ul>li>a{
+    position: relative;
+}
+.header_nav .quick_list>ul>li:first-child>a{
+    color: red;
+}
+.header_nav .quick_list>ul>li:first-child>a::before{
+    position: absolute;
+    content: "";
+    background: url(../img/bg_set_common.png) no-repeat -91px -110px;
+    width: 16px;
+    height:17px; 
+    left:-20px;
+}
+.header_nav .quick_list>ul>li:nth-child(2)>a::before{
+    position: absolute;
+    content: "";
+    background: url(../img/bg_set_common.png) no-repeat -30px -28px;
+    width: 16px;
+    height:17px; 
+    left:-20px;
+}
+.header_nav:hover .quick_list>ul>li:nth-child(2)>a::before{
+    background-position: -56px -28px;
+}
+.header_nav .quick_list>ul>li:nth-child(2)>a{color: #111}
+.header_nav:hover .quick_list>ul>li:nth-child(2)>a{color: #fff}
+.header_nav .quick_list>ul>li>a>.fa-bars{
+    font-size: 20px;
+    color: #111;
+}
+.header_nav:hover .quick_list>ul>li>a>.fa-bars{
+     color: #fff;
+}
+.header_nav .gnb_menu>ul>a{}
+.header_nav .gnb_menu>ul>li>.width100Bg{
+    position: absolute;
+    width: 100%;
+    background: #ddd;
+    left: 0;
+    background: linear-gradient(to right,  #dddddd 0%,#dddddd 30%,#ffffff 30%,#ffffff 100%); 
+    display: none;
+
+}
+.header_nav .gnb_menu>ul>li:hover>.width100Bg{
+     display: block;
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div{
+    display: flex;
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subTitleWrap{
+    width: 30%;
+    padding: 20px 20px 20px 150px
+
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subTitleWrap h2{
+    font-size: 40px;
+    color: #111;
+    margin-bottom: 20px;
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subTitleWrap h2>span>img{
+    width:70px
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subTitleWrap p{
+    font-size: 16px;
+    color: #777777;
+    line-height: 150%;
+    margin-bottom: 20px;
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subTitleWrap .imgWrap{
+    text-align: right;
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subNav{
+    width: 70%;
+    padding: 20px 150px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subNav>dl{
+    flex-basis: 25%;
+}
+.header_nav .gnb_menu>ul>li:nth-child(2)>.width100Bg>div>.subNav>dl{
+    flex-basis: auto;
+    width: 20%;
+}
+.header_nav .gnb_menu>ul>li:last-child>.width100Bg>div>.subNav>dl{
+    flex-basis: auto;
+    width: 20%;
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subNav>dl>dt{
+    margin-bottom: 20px;
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subNav>dl>dd{
+    line-height: 180%;
+}
+.header_nav .gnb_menu>ul>li>.width100Bg>div>.subNav>dl>dd>a{
+    color: #777;
+}
+
+
+
+/*
+---------------맨위에 로그인영역------------------
+1.먼저 투뎁스ul에 엡솔로 띄워주고 디스플레이 논으로 안보이게 함 
+
+---투뎁스 안보이게 하고 원뎁스부터 시작---
+2. 헤더111에 백그라운드 컬러준다
+
+3. 헤더영역에 패딩이나 마진으로 여백을 준다
+
+4. 원뎁스a글씨색으로 흰색주고 ul에 disply:플렉스 준다
+
+5. 여백이 너무 없어서 a에 패딩 10px 준다. 그냥주면     안되서 디스플레이 블럭으로 블럭요소 만들어서 준다.
+
+6. 폰트사이즈 맞춰준다 (12픽셀)
+
+7. ul의 글씨가 오른쪽으로 이동하기 위해서 태그를 쓰는데
+ 기본값은 레프트이므로 글자를 모두 오른쪽으로 옴기려면 justify-content: flex-end; 쓰면 오른쪽으로 이동함
+
+8. a는 text-decoration: none; 로 밑줄 없애준다
+
+9. html 클레스g 적어서 css에서 색깔바꿔준다
+(그냥 클래스로 하면 우선순위에 밀려서 선택자 위에서부터 차례대로 해서 마지막에 .g로 마무리 해서 글씨색상 넣어준다
+(.header_utill>ul>li>a.g{color: #2ee4bb;})
+
+10.투뎁스에 디스플레이 논을 블럭으로 만들어줘서 시작
+11.같은 선택자에서 백그라운드 지정해서 확인
+12. 패딩, 보더 라운드로 상자라인 만들어준다
+13. 투뎁스 a 글씨색과 라인하이트로 정리
+
+14.header_utill>ul>li>ul::before(원뎁스칸) ^만드려고한다
+ 만들어서 빈콘텐츠 만들고 보더 넓이, 보더 스타일, 보더 컬러를 주어준다
+    border-width: 7px;
+    position: absolute; 
+    top: -7px;
+    left: 50px;
+    border-style: solid;
+    border-color: transparent transparent #ddd(컬러는같게) transparent ;
+
+    위 오 아래 왼 순으로 아래만 색깔이 되게 지정한것
+    7픽셀씩!!    7  7
+               7     7
+               7     7
+                 7 7 <<해당부분에만 색이 나오게 하면^모양이 나온다
+15. .header_utill>ul>li>ul 에 디스플레이 블럭을 논으로 바꿔주고 같은선택자에 li에 호버 해서 블럭해주면 없어지고 마우스 가져다되면 생겨난다
+16. 채움밑에 투뎁스 위치를 위해 .header_utill>ul>li:last-child>ul 선택자 새로 만들어서 라이트 -75px 조절해준다
+17. 투뎁스 글자 색 레드로 바꿈
+--------------------------------------------
+그 밑에 영역 
+html에 가서 
+     <div class="header_nav">
+                <h1><a href="#"><img src="./img/logo.png" alt="빨간펜로고"></a></h1>
+                <nav class="gnb_menu"></nav>
+            </div>
+
+    만들고 이미지 빨간펜 로고 저장
+
+ */

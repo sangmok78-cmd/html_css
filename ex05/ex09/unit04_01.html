@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>이미지 배치하고 롤오버시 블러 효과 적용하기</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			/* body{}
+			h1{
+				text-align: center;
+				text-shadow: #000 0px 0px 10px;
+				color: #fff;
+				margin: 20px;
+				font-style: italic;
+			}
+			#bookList{
+				background: red;
+				width: 800px;
+				border: 5px solid #ccc;
+				margin: 0 auto;
+				border-radius: 15px;
+			} */
+
+
+
+/* -------------------------------------------------------강사님 */
+			body{margin-top: 30px;}
+			body h1{
+				text-align: center;
+				font-size: 3em;
+				font-style: italic;
+				color: #fff;
+				text-shadow: 0 0 10px #666;
+			}
+			body #bookList{
+				background: url(./images/book_bg.png) no-repeat ;
+				width: 498px;
+				height: 246px;
+				border: 5px solid #dbdbdb;
+				margin: 20px auto;
+				border-radius: 30px;
+			}
+			body #bookList ul{
+				list-style: none;
+				display: flex; 
+				position: relative;
+				top: 24px;
+				left: 20px;
+			}
+			body #bookList ul li{
+				margin-right: 64px;
+				position: relative;
+			    
+			}
+		
+			body #bookList ul li:hover a span img{
+				box-shadow: 0 0 50px #090;
+			}
+			.hit{
+				width: 40px;
+				height: 40px;
+				background: url(./images/ico_hot.png) no-repeat;
+				display: block; /* 인라인 요소를 블럭요소로 바꿔줌 */
+				position: absolute; /* li기준으로 따라가는경우 앱솔을 주면 위치 변경가능 */
+				top: -12px;
+                left: -15px;
+			}
+
+/* --------------------------------------------------------------------
+			body{margin-top: 30px;}
+			body h1{
+				text-align: center;
+				text-shadow: 0 0 10px #666;
+				color: #fff;
+				font-size: 3em;
+				font-style: italic;
+			}
+			body #bookList{
+				background: url(./images/book_bg.png) ;
+				width: 498px;
+				height: 246px;
+				margin: 20px auto;
+				border: 5px solid #dbdbdb;
+				border-radius: 30px;
+			
+			}
+			body #bookList ul{
+				display: flex;
+				position: relative;
+				top: 23px;
+				left: 22px;
+				
+			}
+			body #bookList ul li{
+				list-style: none;
+				margin-right: 63px;
+				
+			} 
+			body #bookList ul li:hover a span img{
+				box-shadow: 0 0 50px #090;
+			}
+				
+			 
+			.hit{
+				background: url(./images/ico_hot.png) no-repeat	;
+				display: block;
+				width: 40px;
+				height: 40px;
+				position: relative;
+				top: -172px;
+				left: -10px;
+			}  */
+		</style>
+	</head>
+
+	<body>
+		<h1>New Book</h1>
+		<div id="bookList">
+			<ul>
+				<li>
+					<a href="#">
+						<span>
+							<img src="images/book1.png" width="107" height="156" alt="book1" class="frame"/>
+							<span class="hit"></span>
+					    </span>
+					</a>
+				</li>
+				<li><a href="#"><span><img src="images/book2.png" width="107" height="156" alt="book2" class="frame"/><span class="hit"></span></span></a></li>
+				<li><a href="#"><span><img src="images/book3.png" width="107" height="156" alt="book3" /><span class="hit"></span></span></a></li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem</title>
+    <style>
+        *{font-size: 100%;}
+        html{font-size: 20px;}
+        p{
+            font-size: 1em;
+        }
+        p>span{
+            font-size: 3em;
+        }
+       /*  최상위의 값에 따라 값이 정해진다. 20pxx3=60px */
+           /* 정해진값이 없으면 기본 16px */
+    </style>
+</head>
+<body>
+    <p>
+        최상위 html에 적용된 값 기준
+        <span>rem 단위</span>
+    </p>
+</body>
+</html>

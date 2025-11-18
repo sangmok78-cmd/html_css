@@ -1,0 +1,117 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{margin: 20px;}
+.box{
+    border: 5px solid #ddd; 
+    padding: 20px;  
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.container{
+    border: 1px solid #ccc;
+    margin-bottom: 10px;  
+    box-sizing: border-box;
+}
+.container>div{
+    padding: 20px 40px;
+    background: green;
+    width: 300px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+.container>div:nth-child(odd){
+    background: rgb(255, 140, 0);
+      /* 홀수(odd)*/
+}
+
+.content1 #opt1{
+    display: flex;
+    flex-direction: row;
+    /* 정렬방향이 왼->오 (기본)*/
+}
+.content1 #opt2{
+    display: flex;
+    flex-direction: row-reverse;
+    /* 정렬방향 row의 역방향 (시작지점도 바뀜)*/
+}
+
+
+.content1 #opt3{
+    display: flex;
+    flex-direction: row;
+    /* 화면이 기본 가로 길이보다 크게있을때는 기본row로 적용 */
+}
+@media screen and (max-width: 1000px) {
+   .content1  #opt3{
+        flex-direction:column;
+    }
+}
+/* 화면이 기본 가로길이보다 크게 있을때는 기본row로 적용되나 화면을 줄이면 column으로(세로) 배치되면서 넓이가 줄인화면의 100%로 바뀐다 */
+
+
+
+.content1 #opt4{
+    display: flex;
+    flex-direction: column-reverse;
+    /* 정렬방향 column의 역방향*/
+}
+
+.content2 #opt11{
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+@media screen and (max-width: 1000px) {
+    .content2 #opt11{
+        flex-wrap: wrap;
+        
+    }
+}
+.content2 #opt12{
+    display: flex;
+    flex-wrap: wrap;
+    /* 화면이 바뀌면 지정한 넓이보다 좁아지면 줄이 자동으로 바뀜 */
+}
+.content2 #opt13{
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+}
+
+.content3 #opt111{
+    display: flex;
+    justify-content: start;
+   /* 요소들이 시작점으로(왼쪽) 배치됨 */
+}
+.content3 #opt112{
+    display: flex;
+    justify-content: end;
+    /* 요소들이 끝으로(오른쪽) 배치됨 */
+}
+.content3 #opt113{
+    display: flex;
+    justify-content: center;
+    /* 요소들이 중앙으로 배치됨 */
+}
+.content3 #opt114{
+    display: flex;
+    justify-content: space-between;
+    /* 처음 시작점은 붙어있고 요소들간 간격이 동일
+        (요소-요소-요소-요소) */
+}
+.content3 #opt115{
+    display: flex;
+    justify-content: space-around;
+/* 처음 시작점 간격과 동일하게 양옆에 간격이 추가되어 요소들간 간격이 처음 시작점 간격의 2배의 간격이 된다
+     (시작-요소--요소--요소--요소-끝)     */
+}
+.content3 #opt116{
+    display: flex;
+    justify-content: space-evenly;
+    /* 처음 시작점 간격과 동일하게 각각 간격이 같음
+       (시작-요소-요소-요소-요소-끝)    */
+}
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그리드</title>
+  <style>
+    .cnt>div{color: #fff; text-align: center; font-size: 2em;}
+    .cnt>div:nth-child(1){color: #fff; background: red;}
+    .cnt>div:nth-child(2){color: #fff; background: gray;}
+    .cnt>div:nth-child(3){color: #fff; background: blue;}
+    .cnt>div:nth-child(4){color: #fff; background: green;}
+    .cnt>div:nth-child(5){color: #fff; background: violet;}
+    .cnt>div:nth-child(6){color: #fff; background: aqua;}
+    .cnt{
+      display: grid; 
+      grid-template-columns: 100px 500px 200px;
+    /*  지정한 넓이의 세개의 칸(수직)을 만들어줌 (나머지는 맞춰서 따라감) */
+      /* grid-auto-rows: 100px; */
+    /*  지정한 넓이의 두개의 칸(수평)을 만들어줌 (나머지는 맞춰서 따라감) */
+       /*   지정하지 않으면, 기본값으로 , grid-auto-row 하면, 알아서 똑같이 맞춰서 해줌 */
+ 
+       margin-bottom: 10px;
+    }
+    .cnt1{
+      /* grid-template-columns: 2fr 1fr 1fr;  */  /*fr은 넓이 비율을 가짐 /1fr 1fr 1fr; 똑같은비율의 넓이를 만들어줌 */
+      grid-template-columns: repeat(3, 1fr); /* 수직넓이 비율 */
+    }
+    .cnt2{
+      width: 1200px;
+      border: 1px solid #ccc;
+      grid-template-columns:repeat(3, 1fr);
+      grid-template-rows: minmax(300px, auto);
+      
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="cnt">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+  <div class="cnt cnt1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+  <div class="cnt cnt2">
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, perspiciatis ullam? Odit, fugiat exercitationem cum consectetur, obcaecati quasi culpa consequatur sit sed ut blanditiis suscipit reprehenderit accusantium similique velit officiis.</div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, perspiciatis ullam? Odit, fugiat exercitationem cum consectetur, obcaecati quasi culpa consequatur sit sed ut blanditiis suscipit reprehenderit accusantium similique velit officiis.</div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, perspiciatis ullam? Odit, fugiat exercitationem cum consectetur, obcaecati quasi culpa consequatur sit sed ut blanditiis suscipit reprehenderit accusantium similique velit officiis.</div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, perspiciatis ullam? Odit, fugiat exercitationem cum consectetur, obcaecati quasi culpa consequatur sit sed ut blanditiis suscipit reprehenderit accusantium similique velit officiis.</div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, t </div>
+  </div>
+</body>
+</html>

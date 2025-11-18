@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 6em;
+            /*  최상위의 값이 없어 기본 16px로 곱하기 6해서 96px이 나온다 */
+        }
+        p>span{
+            font-size: 0.66666667em;
+     /*  16px기준이 아닌 부모폰트의 기준인 96px곱하기 0.66666667em 해서 64px나옴 */
+         /* em 단위는 무조건 부모의 영향을 받는다 */
+        }
+
+    </style>
+</head>
+<body>
+    <p>em단위는 부모의 영향을 받는다.
+
+        <span>나의 내용은 뭘까요?</span>
+    </p>
+</body>
+</html>

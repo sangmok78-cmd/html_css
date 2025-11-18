@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>목록 문단에 이미지, 위치, 스타일 제어하기</title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			#list1{
+				list-style: url(./images/arrow.gif); /*리스트 앞에 스타일 변경(기존이미지 불러오기)*/
+				list-style-position: inside; /* inside 안쪽을오 들어감 */
+			}
+			#list2{
+				list-style-type: lower-roman; /*lower-roman 소문자 로마체로 변경*/
+			}
+			#list2 li:first-child{ /* li:first-child li라인중 첫번째라인만 지정 */
+				list-style: url(./images/num1_green.gif) inside; /* inside 안쪽을오 들어감 */
+
+			}
+			#list2 li:last-child{
+				list-style: hiragana;
+				 
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>목록 문단 속성 알아보기</h1>
+		<hr>
+		<h2>테마별 명언 모음</h2> 
+		<ul id="list1">
+			<li>도전</li>
+			<li>사랑 </li>
+			<li>우정 </li>
+			<li>이별</li>
+			<li>인생</li>
+			<li>희망</li>
+		</ul>
+		<h2>인물별 명언 모음</h2> 
+		<ol id="list2">
+			<li>간디</li>
+			<li>공자 </li>
+			<li>나폴레옹 </li>
+			<li>아인슈타인</li>
+			<li>에디슨</li>
+		</ol>
+	</body>
+</html>

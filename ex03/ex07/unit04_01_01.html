@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            margin: 50px;
+        }
+        #container .desc{
+            width: 200px;
+            background: yellow;
+            border: 5px dotted #000;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        #container #clip-border{
+            background-clip: border-box;
+        }
+        #container #clip-padding{
+             background-clip:padding-box;
+        }
+        #container #clip-content{
+             background-clip:content-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">   <!-- lorem 아무런 글자가 써짐 -->
+			<div class="desc" id="clip-border">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci culpa officia, minus labore pariatur laudantium! Aperiam architecto quam, debitis aliquid tempora fuga cumque eius illo maxime molestias tempore quos recusandae!</div>
+		</div>
+		<div id="container">   
+			<div class="desc" id="clip-padding">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci culpa officia, minus labore pariatur laudantium! Aperiam architecto quam, debitis aliquid tempora fuga cumque eius illo maxime molestias tempore quos recusandae!</div>
+		</div>
+		<div id="container">   
+			<div class="desc" id="clip-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci culpa officia, minus labore pariatur laudantium! Aperiam architecto quam, debitis aliquid tempora fuga cumque eius illo maxime molestias tempore quos recusandae!</div>
+		</div>
+</body>
+</html>

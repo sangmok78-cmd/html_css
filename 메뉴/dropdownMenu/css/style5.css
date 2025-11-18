@@ -1,0 +1,82 @@
+/* a{text-decoration: none; color: #000;}
+#warp{}
+header{
+    border-right: 1px solid #ddd;
+    width: 300px;
+    height: 100vh;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    font-weight: bold;
+}
+nav{
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+}
+nav ul{}
+nav ul>li{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 40px;
+}
+nav ul>li>a{}
+nav ul>li>ul{display: none;}
+nav ul>li>li{}
+nav ul>li>li>a{} */
+
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+#wrap{width: 100%; height: 100%;}
+#wrap header{
+    width: 300px;
+    height: 100vh;
+    border-right: 1px solid #ccc;
+}
+#wrap header h1{
+    text-align: center;
+    padding: 30px;
+}
+#wrap header h1 a{
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#wrap header nav{
+    margin-top: 50px;
+}
+#wrap header nav>ul{border-top: 1px solid #ccc;}
+#wrap header nav>ul>li{
+    border-bottom: 1px solid #ccc;
+    position: relative; 
+}
+#wrap header nav>ul>li>a{
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+#wrap header nav>ul>li>ul{
+    display: none;
+    position: absolute; 
+    /* 부모기준점 없으면 웹 상단 왼쪽에 위치하게 되므로 바로위 부모에게 기준을 준다 */
+    top: 0;
+    left: 301px;
+}
+#wrap header nav>ul>li:hover>ul{
+    display: block;
+    width: 300px;
+    background: skyblue;
+}
+#wrap header nav>ul>li>ul li{
+    text-align: center;
+}
+#wrap header nav>ul>li>ul li a{
+    padding: 20px;
+    display: block;
+    
+}
