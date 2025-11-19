@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .st1{
+            stroke: blueviolet;
+            stroke-width: 2;
+            animation: st1 3s linear infinite ;
+            stroke-dasharray: 340;
+            stroke-dashoffset: 340;
+            
+        }
+       
+        @keyframes st1{
+            form{stroke-dashoffset: 340;}
+            to{stroke-dashoffset: 0; animation-delay: 2s;}
+        }
+
+        .st2{
+            stroke: green;
+            stroke-width: 2;
+            animation: st2 3s linear infinite ;
+            stroke-dasharray: 414;
+            stroke-dashoffset: 414;
+        }
+
+
+        @keyframes st2{
+            form{  
+                stroke-dashoffset: 414; 
+            }
+            to{
+                stroke-dashoffset: 0; 
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st1{fill: none;}
+	.st2{fill: none;}
+</style>
+	<path class="st1" d="M200.36,174.32c0,0,16.47,1.53,24.89,13.4l22.21-20.3l19.91,20.3c0,0,16.85-16.09,24.51-13.4v50.55
+		c0,0-8.04,31.79-39.06,33.7h-11.11c0,0-32.55,1.53-41.36-32.17V174.32z"/>
+	<path class="st2" d="M250.95,259.34c0,0-1.15,33.32,0,33.32S305.71,250,305.71,250s-4.6,31.17-13.79,46.11
+		c0,0-8.04,8.81-15.7,12.26h-57.45c0,0-13.79-3.83-19.15-11.87c0,0-14.17-37.83-13.02-46.49l54.38,43.43l-0.38-34.09H250.95z"/>
+</svg>
+
+</body>
+</html>
