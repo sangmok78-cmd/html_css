@@ -141,7 +141,7 @@ $tags: html, css, js;
 }
 
 //조건문
-@mixin theme($mode){
+@mixin theme($mode){     //mode는 변수 
     @if $mode == dark{
         background: #000;
         color: #fff;
